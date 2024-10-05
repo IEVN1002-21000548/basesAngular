@@ -5,6 +5,6 @@ export interface IProductos {
     Precio:number;
     Year:string;
     Marca:string;
-    color:string;
+    Color:string;
     ImagenUrl:string;
 }

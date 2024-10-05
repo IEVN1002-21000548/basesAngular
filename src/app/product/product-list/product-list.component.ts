@@ -1,4 +1,3 @@
-import { UrlCodec } from '@angular/common/upgrade';
 import { Component } from '@angular/core';
 import { IProductos } from '../productos';
 
@@ -16,13 +15,13 @@ muestraImg:boolean=true;
 listFilter:string='';
 
 muestImg():void{
-  this.muestraImg=this.muestraImg;
+  this.muestraImg=!this.muestraImg;
 }
 
   //*ngIf=true o false
-productos:IProductos=[
+productos:IProductos[]=[
   {
-    "producto_id":1,
+    "productoId":1,
     "Modelo":"Sentra",
     "Descripcion":"4 puertas",
     "Precio":20000,
@@ -32,7 +31,7 @@ productos:IProductos=[
     "ImagenUrl":"https://th.bing.com/th/id/OIP._Xgyj7KPilfwUyCKIZVaGwAAAA?w=307&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
   },
   {
-    "producto_id":2,
+    "productoId":2,
     "Modelo":"Audi",
     "Descripcion":"4 puertas",
     "Precio":20000,
@@ -42,7 +41,7 @@ productos:IProductos=[
     "ImagenUrl":"https://th.bing.com/th/id/R.aecb55fc4993ee4332a5ac147c3a1aa8?rik=h%2bTogZhlYuUuxQ&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2f9%2f97%2fAudi_A1.jpg&ehk=TjzJus6E3hT5EXCpzRdjWn5wx8ikVyffAZvb4VmHRlc%3d&risl=&pid=ImgRaw&r=0"
   },
   {
-    "producto_id":3,
+    "productoId":3,
     "Modelo":"Bocho",
     "Descripcion":"Esta chido",
     "Precio":200,

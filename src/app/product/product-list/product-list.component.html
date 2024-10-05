@@ -37,6 +37,7 @@
                 <tbody>
                     <tr *ngFor="let producto of productos | productoFilter:listFilter">
                         <td><img [src]="producto.ImagenUrl"
+                            *ngif="muestraImg"
                             [title]="producto.Modelo"
                             [style.width.px]="imageWidth"
                             [style.margin.px]="imageMargin"></td>

@@ -7,13 +7,17 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ejemplo1Component } from './formularios/ejemplo1/ejemplo1.component';
 import { ProductoFilterPipe } from './product/producto-filter.pipe';
+import { CineComponent } from './Cinepolis/cine/cine.component';
+import { ResistenciasComponent } from './formularios/resistencias/resistencias.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     Ejemplo1Component,
-    ProductoFilterPipe
+    ProductoFilterPipe,
+    CineComponent,
+    ResistenciasComponent
   ],
   imports: [
     BrowserModule,

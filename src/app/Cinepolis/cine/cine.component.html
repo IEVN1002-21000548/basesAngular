@@ -1,0 +1,60 @@
+<!-- <div>
+    <label for="">Nombre </label>   
+    <form [formGroup]="Cine">
+        <input type="text" formControlName="nombre">
+        <label for="">Cantidad de Compradores </label>
+        <input type="number" formControlName="C_compradores"><br>
+
+        <label for=""><h4>Tarjeta CINECO: </h4></label><input type="radio" id="si" formControlName="opcion" value="si">SI
+        <input type="radio" id="no" formControlName="opcion" value="no">NO<br>
+        <label for="">Cantidad de Boletos 
+        <input type="number" formControlName="boletos"><br></label>
+        
+        <button (click)="Calcular()">Sumar</button>
+        <div style="text-align: center;">
+            <label for="">
+                <h3>{{Total}}</h3>
+                <h3>{{mensaje}}</h3>
+            </label>
+        </div>
+    </form>
+</div> -->
+<div class="form-container">
+    <form [formGroup]="Cine" class="cine-form">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" formControlName="nombre" class="input-field">
+        </div>
+        
+        <div class="form-group">
+            <label for="C_compradores">Cantidad de Compradores</label>
+            <input type="number" formControlName="C_compradores" class="input-field">
+        </div>
+        
+        <div class="form-group radio-group">
+            <label>Tarjeta CINECO:</label>
+            <label for="si" class="radio-label">
+                <input type="radio" id="si" name="opcion" formControlName="opcion" value="si">SI
+            </label>
+            <label for="no" class="radio-label">
+                <input type="radio" id="no" name="opcion" formControlName="opcion" value="no">NO
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label for="boletos">Cantidad de Boletos</label>
+            <input type="number" formControlName="boletos" class="input-field">
+        </div>
+        
+        <button (click)="Calcular()" class="submit-btn">Calcular</button>
+        
+        <div class="total-container">
+            <h3 *ngIf="nombre">Nombre: {{nombre}}</h3>
+            <h3 *ngIf="boletos">Cantidad de Boletos: {{boletos}}</h3>
+            <h3>Total: {{Total}}</h3>
+            <br>
+            <h3>{{mensaje}}</h3>
+        </div>
+    </form>
+</div>
+
